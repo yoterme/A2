@@ -1,0 +1,75 @@
+<script>
+
+  let calcQty = (sum, nominal) => {
+    var qNom = Math.floor(sum / nominal)
+    return qNom > 10 ? 10 : qNom;
+  }
+
+  const total_sum = +prompt("Enter amount to disburse");
+
+  var left_sum = total_sum;
+
+  var qty = 0;
+
+  var res = "";
+
+  const qty500 = calcQty (left_sum, 500);
+  left_sum -= qty500 * 500;
+
+  const qty200 = calcQty (left_sum, 200);
+  left_sum -= qty200 * 200;
+
+  const qty100 = calcQty (left_sum, 100);
+  left_sum -= qty100 * 100;
+
+  const qty50 = calcQty (left_sum, 50);
+  left_sum -= qty50 * 50;
+
+  const qty20 = calcQty (left_sum, 20);
+  left_sum -= qty20 * 20;
+
+  const qty10 = calcQty (left_sum, 10);
+  left_sum -= qty10 * 10;
+
+  const qty5 = calcQty (left_sum, 5);
+  left_sum -= qty5 * 5;
+
+  const qty2 = calcQty (left_sum, 2);
+  left_sum -= qty2 * 2;
+
+  const qty1 = calcQty (left_sum, 1);
+  left_sum -= qty1 * 1;
+
+  if (!left_sum) {
+    res += qty500 ? `${qty500} notes of 500\n` : "";
+    res += qty200 ? `${qty200} notes of 200\n` : "";
+    res += qty100 ? `${qty100} notes of 100\n` : "";
+    res += qty50 ? `${qty50} notes of 50\n` : "";
+    res += qty20 ? `${qty20} notes of 20\n` : "";
+    res += qty10 ? `${qty10} notes of 10\n` : "";
+    res += qty5 ? `${qty5} notes of 5\n` : "";
+    res += qty2 ? `${qty5} notes of 2\n` : "";
+    res += qty1 ? `${qty5} notes of 1\n` : "";
+
+    console.log (res);
+
+  } else
+  {
+    alert ("Unable to disburse requested amount")
+  }
+
+
+
+
+
+
+
+
+
+
+
+  // , 2, 5, 10, 20, 50, 100, 200, 500
+
+
+
+</script>
