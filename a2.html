@@ -9,8 +9,6 @@
 
   var left_sum = total_sum;
 
-  var qty = 0;
-
   var res = "";
 
   const qty500 = calcQty (left_sum, 500);
@@ -48,8 +46,8 @@
     res += qty20 ? `${qty20} notes of 20\n` : "";
     res += qty10 ? `${qty10} notes of 10\n` : "";
     res += qty5 ? `${qty5} notes of 5\n` : "";
-    res += qty2 ? `${qty5} notes of 2\n` : "";
-    res += qty1 ? `${qty5} notes of 1\n` : "";
+    res += qty2 ? `${qty2} notes of 2\n` : "";
+    res += qty1 ? `${qty1} notes of 1\n` : "";
 
     console.log (res);
 
@@ -57,19 +55,5 @@
   {
     alert ("Unable to disburse requested amount")
   }
-
-
-
-
-
-
-
-
-
-
-
-  // , 2, 5, 10, 20, 50, 100, 200, 500
-
-
 
 </script>
